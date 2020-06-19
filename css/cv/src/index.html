@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iskender Chinaliev</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+  <header class="header" id="app">
+    <nav class="nav">
+      <ul>
+        <li @click='setInfoBlock("about")' 
+          :class="{active: isActive === 'about'}"
+        >
+          <i class="material-icons">perm_identity</i>
+          <span>About me</span>
+        </li>
+        <li @click='setInfoBlock("projects")' 
+          :class="{active: isActive === 'projects'}"
+        >
+          <i class="material-icons">remove_from_queue</i>
+          <span>Side Projects</span>
+        </li>
+        <li @click='setInfoBlock("contacts")' 
+          :class="{active: isActive === 'contacts'}"
+        >
+          <i class="material-icons">email</i>
+          <span>Contacts</span>
+        </li>
+      </ul>
+    </nav>
+    <div class="info-block">
+      <section v-if='infoBlock === "about"' class="block info-block__about">
+        <div class="info-block__about--bio">
+          <div class="bio-title">
+            <p>BIO:</p>
+          </div>
+          <div class="bio-description">
+            <p>Full name: Iskender Chinaliev</p>
+            <p>Birth date: 04.03.1987</p>
+            <p>Located: Bishkek, Kyrgyzstan</p>
+            <p>Role: Frontend Developer</p>
+            <p>Tech stack: JS/Vue, CSS, HTML</p>
+          </div>
+        </div>
+        <hr>
+        <div class="info-block__about--bio">
+          <div class="bio-title">
+            <p>Experience:</p>
+          </div>
+          <div class="bio-description">
+            <div class="bio-description__experience">
+              <p>Company: DevForge</p>
+              <p>Period: 01.19 - 07.19</p>
+              <p>Role: Frontend dev</p>
+              <p>Tech stack: JS/Vue, CSS, HTML</p>
+              <p class="line">Responsibilities: Building layout and writing logic for the project related with logistic</p>
+            </div>
+            <div class="bio-description__experience">
+              <p>Company: Intelliants</p>
+              <p>Period: 07.19 - currently</p>
+              <p>Role: Frontend dev</p>
+              <p>Tech stack: JS/Vue, JQuery, CSS, HTML</p>
+              <p class="line">Projects in which I participated: 
+                <a href="https://www.bildkopie.com/" target="blank">Bildkopie</a> - SaaS for photographers; 
+                <a href="https://belliata.com/" target="blank">Belliata</a> - SaaS for salons 
+              </p>          
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section v-if='infoBlock === "projects"' class="block info-block__projects">
+        <h1>2</h1>
+      </section>
+      
+      <section v-if='infoBlock === "contacts"' class="block info-block__contacts">
+        <h1>3</h1>
+      </section>
+    </div>
+  </header>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
