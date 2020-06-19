@@ -1,13 +1,12 @@
 {
-  "name": "cv",
+  "name": "frontend-css",
   "version": "1.0.0",
-  "description": "about me as a dev",
-  "main": "index.js",
+  "description": "my side projects built with css & html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "CV"
+    "CSS, HTML, UI, UX"
   ],
   "author": "Iskender <isken001@gmail.com>",
   "license": "ISC",
